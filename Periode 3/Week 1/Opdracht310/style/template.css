@@ -1,0 +1,157 @@
+/** 
+Template bestand voor de opdrachten. Voer hier GEEN CSS in! 
+Voer jouw eigen CSS altijd in (het nog aan te maken) style.css in!
+**/
+
+@import url(http://fonts.googleapis.com/css?family=Trocchi);
+
+
+/** Extra classes om te gebruiken in de HTML / Javascript **/
+.hide {
+    display: none;
+}
+.disabled {
+    pointer-events: none;
+    opacity: 0.7;
+}
+.fail { 
+    background-image: url("../images/cross.png"); 
+}
+.error {
+    background-image: url("../images/icon-warning.png");
+    background-color: rgba(255, 46, 46, 0.7);
+}
+.pass { 
+    background-image: url("../images/tick.png");
+}
+.fail, .pass, .error {
+    background-repeat: no-repeat; 
+    background-position: 95% center;
+}
+
+/** Reguliere CSS opmaak **/
+body {
+    background-color: #90908c;
+    margin: 0;
+}
+
+form {
+    font-family: trocchi, georgia, times, serif;
+    max-width: 1000px;
+    margin: 0 auto 0 auto;
+}
+.container {
+    font-family: trocchi, georgia, times, serif;
+}
+.one-third, .two-thirds {
+    background-color: #f8584a;
+    border: 12px solid #fff;
+    float: left;
+    padding: 10px;
+    margin: 10px;
+    color: #fff;
+    overflow: hidden;
+}
+
+.one-third {
+    width: 25%;
+    padding-bottom:30px;
+}
+.one-third h1{
+    text-align: center;
+}
+.two-thirds {
+    width: 50%;
+    padding-top: 30px;
+    padding-left: 30px;
+    padding-right: 30px;        
+}
+.container {
+    width: 80%;
+    margin-left:auto;
+    margin-right: auto;
+}
+
+.login .one-third, .login .two-thirds { 
+    height: 20em;
+}
+.logoClass {
+    width:100%;
+}
+
+/* FORM STYLES */
+legend {
+    font-size: 160%;
+    position: relative;
+    color: #fff;
+    border: none; margin: 0.5em;
+}
+legend { 
+    top: -1em; left: -1em;
+}
+
+label {
+    width: 100%; display: block;
+}
+label[for="parentsConsent"], label[for="showPwd"], label[for="search"], label[for="print"], label[for="other"], label[for="parents-consent"] {
+    display: inline;
+}
+label[for="equipmentType"], label[for="model"] {
+    display: inline-block; width: 4em;
+}
+span {
+    width:100%;
+    height: 14px;
+    display:block;
+}
+
+input, textarea {
+    border: none;
+    padding: 8px;
+    line-height: 1.2em; 
+    margin-bottom: 1.4em;
+    font-size: 1em;
+    border-radius: 3px
+}
+
+input[type="text"], input[type="email"], input[type="password"], input[type="date"], input[type="color"], input[type="number"], textarea {
+    width: 90%;
+}
+
+input[type="text"], input[type="email"], input[type="number"], input[type="password"], input[type="date"], input[type="color"], textarea{
+    box-shadow: inset 0 1px 2px #000;
+    outline: 0;
+}
+
+input[type="submit"], button, input[type="button"] {
+    background-color: #000;
+    border-radius: 3px;
+    color: #fff;
+    display: block;
+    float: right;
+    font-family: trocchi, georgia, times, serif;
+    font-size: 1em;
+    margin-right: 1.4em;
+}
+
+input[type="submit"]:hover, button:hover, input[type="button"]:hover {
+    background-color: #666;
+    cursor: pointer;
+    text-shadow: 2px 2px 2px #000;
+    box-shadow: inset 0 2px 2px #000;
+}
+select {
+    border-radius: 3px;
+    margin-right:1.4em;
+    font-size: 1em;
+    font-family: trocchi, georgia, times, serif;
+    padding: 5px 10px 5px 15px;
+    margin-bottom: 1.4em;
+}
+textarea {
+    width: 90%;
+    height: 5em;
+    clear: left;
+    border: none;
+}
+

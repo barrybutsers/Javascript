@@ -1,0 +1,31 @@
+@font-face 
+{
+        font-family: "RobotoCondensed-Light";
+        src:local("RobotoCondensed-Light"),url("Fonts/RobotoCondensed-Light.ttf") format("opentype");
+}
+h1:first-letter,h2:first-letter
+{
+    color: #49AEEF;
+}
+h1,h2
+{
+    letter-spacing: 8px;
+    word-spacing: 15px;
+}
+ul
+{
+    list-style-image: url(Img/vink.png);
+}
+p
+{
+    font-family: RobotoCondensed-Light;
+    color: #535353;
+    font-size: 16px;   
+}
+#persoon
+{
+    font-style: italic;
+}
+h1, h2, img, p{
+    display: none;
+}

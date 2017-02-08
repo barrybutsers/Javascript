@@ -1,0 +1,60 @@
+button {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 15px 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+	margin-bottom: 15px;
+}
+button:hover {
+	cursor: pointer;
+}
+body 
+{
+    font-family: Tahoma;
+}
+
+h1, h2
+{
+    color: #FFFFFF; 
+}
+
+td
+{
+    text-align: center;
+}
+
+.black
+{
+    background-color: #000000;
+}
+
+.blue
+{
+    background-color: #005BFF;
+    color: #FFFFFF;
+}
+
+.grey
+{
+    background-color: #808080;
+}
+
+.red
+{
+    background-color: #FF0000;
+}
+
+table
+{
+
+    border-collapse: collapse;
+}
+
+td, th
+{
+    border: 3px solid black;
+}

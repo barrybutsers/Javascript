@@ -1,0 +1,107 @@
+<!--
+Opdracht:       Opdracht 310
+Auteur:         Lars van Alphen IO1D4
+Aanmaakdatum:   XX-XX-XXXX
+Bestandsnaam:   index.html
+-->
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>
+            Bowlingcentrum "De Kromme Pin"
+        </title>
+        <meta name="description" content="XXX">
+        <meta name="keywords" content="XXX">
+
+        <!-- Voegt het bowling icoontje als favicon toe -->
+        <link rel="shortcut icon" type="image/png" href="/images/favicon.png">
+
+        <!-- Voegt de standaard styling toe. In dit bestand hoef je niets aan te passen -->
+        <link rel="stylesheet" type="text/css" href="style/template.css">
+        <script src="script/jquery-3.1.1.js"></script>
+        <script src="script/Script.js"></script>
+
+
+    </head>
+    <body>
+        <div class="container">
+            <div class="one-third">
+                <!-- Content voor het linkerblok van de site -->
+                <img src="images/Logo.png" alt="Het logo van Bowlingcentrum 'De Kromme Pin'" class="logoClass">
+                <h1>
+                    Welkom
+                </h1>
+            </div>
+            <div class="two-thirds">
+                <!-- Content voor het rechterblok van de site -->
+                <legend>Reserveringsformulier</legend>
+
+                <form id="registratieFormulier">
+                    <label for="name">Naam</label>
+                    <input type="text" name="name" id="name">
+
+                    <label for="amount">Aantal personen</label>
+                    <select name="amount" id="select">
+                        <option>Kies een aantal</option>
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                        <option>6</option>
+                        <option>7</option>
+                        <option>8</option>
+                        <option>9</option>
+                        <option>10</option>
+                        <option>11</option>
+                        <option>12</option>
+                        <option>Meer dan 12</option>
+                    </select>
+                    
+                    <label for="date">Gewenste datum (mm-dd-yyyy)</label>
+                    <input type="date" name="date">
+
+                    <label for="group">Diner?</label>
+                    <input type="checkbox" name="groupSelector" id="diner">Ja, we willen graag eten
+                    
+                    <label for="dinnerAmount" class="hide">Met hoeveel mensen kom je eten?</label>
+                    <input type="number" maxlength="20" class="hide" name="dinnerAmount">
+                    
+                    <fieldset>
+                        <h3>
+                            Overzicht
+                        </h3>
+                        <br>
+                        
+                        <!-- Toon in de span de opgegeven naam -->
+                        Naam: 
+                        <span></span>
+                        
+                        <!-- Toon in  de span het aantal personen -->
+                        Aantal personen:
+                        <span></span>
+                        
+                        <!-- Toon de in de span de gegeven datum -->
+                        Gewenste datum:
+                        <span></span>
+                        
+                        <!-- Toon de in de span of de mensen wel of niet mee eten -->
+                        Mee eten?
+                        <span></span>
+                        
+                        <!-- Toon in de span met hoeveel personen er gegeten gaat worden -->
+                        Aantal eters:
+                        <span></span>
+                        
+                    </fieldset>
+                    
+                    <input type="submit" value="Versturen">
+                </form>
+
+            </div>
+        </div>
+    </body>
+</html>

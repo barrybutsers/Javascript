@@ -1,0 +1,16 @@
+button
+{
+    background-color: #FFA500;
+    height: 100px;
+    width: 100px;
+    border: 5px solid cyan;
+}
+
+#button1:hover
+{
+    background-color: black;
+    color: white;
+}
+td{
+    border: 2px solid black;
+}

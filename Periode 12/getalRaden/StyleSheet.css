@@ -1,0 +1,13 @@
+body{
+    background-color: cyan;
+}
+h1, h2, p, img{
+    text-align: center;
+    font-family: Rockwell;
+    color: red;
+}
+input{
+    font-size: large;
+    text-align: center;
+    color: black;
+}

@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<script>
+			function geef(n) {
+				return document.getElementById(n)
+			}
+			function eventBij(n, t, i) {
+				n.addEventListener ? n.addEventListener(t, i, !1) : n.attachEvent ? n.attachEvent("on" + t, i) : n[t] = i
+			}
+			function erIsStorage() {
+				try {
+					return "sessionStorage"in window && window.sessionStorage !== null
+				} catch (n) {
+					return !1
+				}
+			}
+			function openPop(n, t, i) {
+				var r = (screen.availWidth - t) / 2
+				  , u = (screen.availHeight - i) / 2;
+				hetVenster = window.open(n, "_blank", "scrollbars=no,resizeable=no,menubar=no,toolbar=no,directories=no,width=" + t + ",height=" + i)
+			}
+			function sluitPop() {
+				hetVenster != null && hetVenster.open && hetVenster.close()
+			}
+			function classBij(n, t) {
+				document.documentElement.classList ? n.classList.add(t) : n.className = t
+			}
+			function classWeg(n, t) {
+				document.documentElement.classList ? n.classList.remove(t) : n.className = ""
+			}
+			function heeftClass(n, t) {
+				return n.className && new RegExp("(\\s|^)" + t + "(\\s|$)").test(n.className)
+			}
+			eventBij(window, "DOMContentLoaded", function() {
+				function r() {
+					var t, n;
+					for (f = !1,
+					t = geef("dHead").getElementsByTagName("li"),
+					n = 0; n < t.length; n++)
+						classWeg(t[n], "aan")
+				}
+				function h() {
+					i = !0;
+					geef("ctBurg").scrollTop = 0;
+					geef("dVast").style.display = "block";
+					classBij(geef("ctBurg"), "aan")
+				}
+				function u() {
+					i = !1;
+					geef("dVast").style.display = "none";
+					classWeg(geef("ctBurg"), "aan")
+				}
+				function o() {
+					Array.prototype.map.call(document.querySelectorAll("#dInhoud iframe"), function(n) {
+						var t = n.getAttribute("height") / n.getAttribute("width");
+						n.style.height = Math.floor(parseFloat(getComputedStyle(n, null ).width) * t) + "px"
+					})
+				}
+				var f = !1, e = "", s = geef("menu2"), i = !1, t, n;
+				Array.prototype.map.call(document.querySelectorAll("#menu2 > li > a"), function(n, t) {
+					eventBij(n, "click", function(n) {
+						n.preventDefault ? n.preventDefault() : n.returnValue = !1
+					});
+					n.parentNode.id = "m2" + t
+				});
+				geef("aZoek").style.display = "block";
+				t = geef("menu1").cloneNode(!0);
+				t.id = "bMenu1";
+				t.removeAttribute("style");
+				t.removeAttribute("class");
+				geef("ctBurg").appendChild(t);
+				Array.prototype.map.call(document.querySelectorAll("#bMenu1 i"), function(n) {
+					n.parentNode.removeChild(n)
+				});
+				n = geef("menu2").cloneNode(!0);
+				n.id = "bMenu2";
+				n.removeAttribute("style");
+				n.removeAttribute("class");
+				geef("ctBurg").appendChild(n);
+				Array.prototype.map.call(document.querySelectorAll("#bMenu2 i"), function(n) {
+					n.parentNode.removeChild(n)
+				});
+				Array.prototype.map.call(document.querySelectorAll("#bMenu2 > li > a"), function(n, t) {
+					eventBij(n, "click", function(n) {
+						n.preventDefault ? n.preventDefault() : n.returnValue = !1
+					});
+					n.parentNode.id = "bm2" + t
+				});
+				o();
+				eventBij(geef("menu2"), "click", function(n) {
+					for (var t = n.target; t && t.parentNode !== s; )
+						if (t = t.parentNode,
+						!t)
+							return;
+					t.tagName === "LI" && (t.id == e && f ? r() : (r(),
+					classBij(t, "aan"),
+					e = t.id,
+					f = !0))
+				});
+				eventBij(geef("bMenu2"), "click", function(t) {
+					for (var i = t.target; i && i.parentNode !== n; )
+						if (i = i.parentNode,
+						!i)
+							return;
+					i.tagName === "LI" && (heeftClass(i, "aan") ? classWeg(i, "aan") : classBij(i, "aan"))
+				});
+				eventBij(geef("dInhoud"), "click", function() {
+					r()
+				});
+				eventBij(window, "resize", function() {
+					if (i) {
+						var n = geef("aBurg")
+						  , t = n.currentStyle ? n.currentStyle.display : getComputedStyle(n, null ).display;
+						t != "block" && u()
+					}
+					o()
+				});
+				eventBij(geef("aBurg"), "click", function(n) {
+					i ? u() : h();
+					r();
+					n.preventDefault ? n.preventDefault() : n.returnValue = !1
+				});
+				eventBij(geef("dVast"), "click", function() {
+					u()
+				});
+				Array.prototype.map.call(document.querySelectorAll("#bMenu2 > li > ul a"), function(n) {
+					eventBij(n, "click", function() {
+						u()
+					})
+				})
+			})
+
+
+		</script>
+	</head>
+	<body>
+	</body>
+</html>
